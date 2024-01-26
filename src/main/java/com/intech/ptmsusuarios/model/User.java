@@ -4,22 +4,31 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
+@Entity
 @Table(name = "usuario")
 public class User {
   @Id
-  @Column(name = "Id")
-  private int id;
-  @Column(name = "Name")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "iduser")
+  private long id;
+
+  @Column(name = "name")
   private String name;
-  @Column(name = "LastName")
+
+  @Column(name = "lastname")
   private String lastName;
-  @Column(name = "Age")
+
+  @Column(name = "age")
   private int age;
-  @Column(name = "Dni")
+
+  @Column(name = "dni")
   private int dni;
-  @Column(name = "Mail")
+
+  @Column(name = "mail")
   private String email;
+
   @ManyToOne
-  @Column(name = "IdRol")
+  @JoinColumn(name = "idrol")
   private Role role;
+
 }

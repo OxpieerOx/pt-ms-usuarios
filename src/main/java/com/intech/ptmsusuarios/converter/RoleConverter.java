@@ -9,7 +9,7 @@ public class RoleConverter extends AbstractConverter<Role, RoleDTO>{
     Role role = new Role();
 
     role.setName(dto.getName());
-    role.setCreatedBy(dto.getCreatedBy());
+    role.setCreatedby(dto.getCreatedBy());
 
     return role;
   }
@@ -19,7 +19,7 @@ public class RoleConverter extends AbstractConverter<Role, RoleDTO>{
     RoleDTO roleDto = new RoleDTO();
 
     roleDto.setName(entity.getName());
-    roleDto.setCreatedBy(entity.getCreatedBy());
+    roleDto.setCreatedBy(entity.getCreatedby());
 
     return roleDto;
   }

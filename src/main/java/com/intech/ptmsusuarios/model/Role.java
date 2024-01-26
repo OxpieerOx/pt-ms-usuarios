@@ -1,18 +1,20 @@
 package com.intech.ptmsusuarios.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
+@Entity
 @Table(name = "rol")
 public class Role {
   @Id
-  @Column(name = "Id")
-  private int id;
-  @Column(name = "Name")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "idrol")
+  private long idrol;
+
+  @Column(name = "name")
   private String name;
-  @Column(name = "CreatedBy")
-  private String createdBy;
+
+  @Column(name = "createdby")
+  private String createdby;
 }
