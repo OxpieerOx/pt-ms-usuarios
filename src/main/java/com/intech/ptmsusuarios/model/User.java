@@ -4,22 +4,23 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
-@Table(name = "usuario")
+@Table(name = "user")
+@Entity
 public class User {
   @Id
-  @Column(name = "Id")
-  private int id;
-  @Column(name = "Name")
+  @Column(name = "id")
+  private long id;
+  @Column(name = "name")
   private String name;
-  @Column(name = "LastName")
+  @Column(name = "lastname")
   private String lastName;
-  @Column(name = "Age")
+  @Column(name = "age")
   private int age;
-  @Column(name = "Dni")
+  @Column(name = "dni")
   private int dni;
-  @Column(name = "Mail")
+  @Column(name = "email")
   private String email;
   @ManyToOne
-  @Column(name = "IdRol")
+  @JoinColumn(name = "id_role")
   private Role role;
 }

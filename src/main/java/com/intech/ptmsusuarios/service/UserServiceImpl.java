@@ -7,7 +7,6 @@ import com.intech.ptmsusuarios.dao.IRoleDao;
 import com.intech.ptmsusuarios.dao.IUserDao;
 import com.intech.ptmsusuarios.model.dto.RoleDTO;
 import com.intech.ptmsusuarios.model.dto.UserDTO;
-import jakarta.persistence.PersistenceException;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.HibernateException;
 import org.slf4j.Logger;
